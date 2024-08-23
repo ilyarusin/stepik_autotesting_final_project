@@ -18,3 +18,6 @@ class ProductPage(BasePage):
         product_price_on_the_product_page = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE_ON_THE_PRODUCT_PAGE).text
         assert product_price_in_the_cart == product_price_on_the_product_page, "Стоимость корзины не совпадает с ценой товара"
         print("Сумма в корзине соответствует цене товара")
+
+    def should_not_be_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is presented, but should not be"

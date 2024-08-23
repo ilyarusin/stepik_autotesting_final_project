@@ -20,3 +20,4 @@ def test_guest_can_add_product_to_basket(browser, link):
     page.solve_quiz_and_get_code()
     page.product_name_check()
     page.cart_summ_check()
+    page.should_not_be_success_message()
