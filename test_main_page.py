@@ -6,7 +6,6 @@ import pytest
 link = "http://selenium1py.pythonanywhere.com/"
 
 @pytest.mark.xfail
-@pytest.mark.skip(reason="пока не надо тестировать этот кейс")
 def test_guest_can_go_to_login_page(browser):
     page = MainPage(browser, link)   # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес 
     page.open()                      # открываем страницу
